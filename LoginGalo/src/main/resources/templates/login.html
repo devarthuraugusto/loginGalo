@@ -4,29 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login | Galo</title>
+    <link rel="icon" type="image/x-icon" th:href="@{/images/galoIcon.ico}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 
 <body>
-<div class="login-container">
-    <div class="login-image-logo-container">
-        <img th:src="@{/images/imagemgalo.png}" alt="Logo PUC Minas">
-    </div>
-    <div class="login-form">
-        <form th:action="@{/login}" method="post" class="login-form">
-            <h4 class="login-title">Login</h4>
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <input type="password" id="password" name="password" placeholder="Senha" required>
-            <div class="login-button-container">
-                <button type="submit">Entrar</button>
+<div class="page">
+    <div class="login-container">
+        <aside class="brand-panel">
+            <div class="brand-panel-stripes"></div>
+            <div class="brand-panel-glow"></div>
+            <div class="brand-content">
+                <div class="login-image-logo-container">
+                    <img th:src="@{/images/imagemgalo.png}" alt="Escudo do Clube Atlético Mineiro">
+                </div>
+                <h1 class="brand-title">Galo</h1>
+                <p class="brand-subtitle">Clube Atlético Mineiro</p>
+                <span class="brand-badge">&#9733; Campeão Brasileiro 1971</span>
             </div>
-            <p class="login-redirect-options">
-                Ainda não tem cadastro? <br>
-                <a href="/register">Cadastre-se</a> |
-                <a href="/recoverpassword">Esqueceu sua senha?</a>
-            </p>
-        </form>
+        </aside>
+        <section class="login-form">
+            <form th:action="@{/login}" method="post" class="login-form-content">
+                <h4 class="login-title">Bem-vindo de volta</h4>
+                <p class="login-subtitle">Entre com sua conta para continuar</p>
+
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M4 21C4 16.5817 7.58172 13 12 13C16.4183 13 20 16.5817 20 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <input type="text" id="username" name="username" placeholder="Digite seu usuário" required autocomplete="username">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required autocomplete="current-password">
+                    </div>
+                </div>
+
+                <div class="login-button-container">
+                    <button type="submit">Entrar</button>
+                </div>
+
+                <p class="login-redirect-options">
+                    Ainda não tem cadastro?
+                    <a class="link-primary" href="/register">Cadastre-se</a>
+                </p>
+                <p class="login-redirect-options login-redirect-secondary">
+                    <a class="link-secondary" href="/recoverpassword">Esqueceu sua senha?</a>
+                </p>
+            </form>
+        </section>
     </div>
 </div>
 </body>

@@ -1,0 +1,24 @@
+.register-container {
+    max-width: 980px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
+}
+
+.input-row .input-icon {
+    left: 12px;
+}
+
+.input-row input {
+    padding-left: 2.3rem;
+    font-size: 0.88rem;
+}
+
+@media (max-width: 768px) {
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+}
