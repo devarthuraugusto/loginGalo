@@ -1,0 +1,21 @@
+.error-message {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(255, 116, 60, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 116, 60, 0.08);
+}
+
+.error-message strong {
+    display: block;
+    color: var(--orange);
+    font-size: 0.85rem;
+}
+
+.error-message span {
+    display: block;
+    color: var(--gray);
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
